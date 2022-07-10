@@ -10,7 +10,7 @@ This is great for ensuring developers and CI are using the same version of Gradl
 There a few main problems regarding *security*:
 1. Malicious `gradle-wrapper.jar` files may be added to PRs. It's hard to know if these are trustworthy - there's no easy-to-read diff. The Gradle team made a [wrapper-validation-action](https://github.com/gradle/wrapper-validation-action) to validate checksums in PRs. Whilst this does mitigate the problem, not every project is using this.
 2. The aforementioned validation action may not be up-to-date, so there could be small windows of vulnerability. Tools like Dependabot can make this less likely - it can even auto-update [Github Actions](https://github.com/gradle/wrapper-validation-action/pull/58).
-3. Dependabot can update dependencies & plugins in the gradle ecosystem - but it doesn't currently update the gradle wrapper (see[1 - dependabot-core](https://github.com/dependabot/dependabot-core/issues/2223)/[2 - gradle](https://github.com/gradle/gradle/issues/20438)).
+3. Dependabot can update dependencies & plugins in the gradle ecosystem - but **Dependabot doesn't currently update the gradle wrapper (see[1 - dependabot-core](https://github.com/dependabot/dependabot-core/issues/2223)/[2 - gradle](https://github.com/gradle/gradle/issues/20438)).**
 
 Whilst you can manually update the gradle wrapper .jar/properties/scripts with `./gradlew wrapper --gradle-version ${VERSION} --distribution-type all`, it's not automatic.
 It would be nice to remove as much toil as possible around dependency/tooling upgrades.
