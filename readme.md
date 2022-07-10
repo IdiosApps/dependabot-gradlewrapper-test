@@ -28,11 +28,13 @@ In addition, the gradle wrapper is outdated:
 
 3. `./gradlew wrapper --gradle-version 7.4.1 --distribution-type all` was used (at least 7.4.2 is available)
 
-This repo could be used with Dependabot's [_dry run_ mode](https://github.com/dependabot/dependabot-core#dry-run-script). Usage should look like:
+This repo can be used with Dependabot's [_dry run_ mode](https://github.com/dependabot/dependabot-core#dry-run-script).
+*Currently*, the dependabot-core dry only picks up on 1 and 2:
+
 ```shell
 bin/dry-run.rb gradle IdiosApps/dependabot-gradlewrapper-test
+...
+=> updating 2 dependencies: org.junit.jupiter:junit-jupiter-api, org.springframework.boot
 ```
 
-*Currently*, the dependabot-core dry run will  only pick up on 1 and 2.
-
-If a PR to dependabot-core can also update the gradle wrapper, there should also be at least one more detected change (3 - gradle wrapper updates could include .jar/props/scripts, 1 file minimum).
+If a PR to dependabot-core can also update the gradle wrapper, there should also be at least one more detected change (1, 2, and also 3). Gradle wrapper updates could include .jar/props/scripts, so at least one 1 file.
