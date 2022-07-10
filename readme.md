@@ -23,6 +23,7 @@ The `build.gradle` has two outdated dependencies:
 2. Dependency: 'org.junit.jupiter:junit-jupiter-api:5.0.0' (at least 5.8.2 is available)
 
 In addition, the gradle wrapper is outdated:
+
 3. `./gradlew wrapper --gradle-version 7.4.1 --distribution-type all` was used (at least 7.4.2 is available)
 
 This repo could be used with Dependabot's [_dry run_ mode](https://github.com/dependabot/dependabot-core#dry-run-script). Usage should look like:
@@ -30,5 +31,6 @@ This repo could be used with Dependabot's [_dry run_ mode](https://github.com/de
 bin/dry-run.rb gradle IdiosApps/dependabot-gradlewrapper-test
 ```
 
-The dependabot-core dry run should pick up on 1 and 2.
-If a PR to dependabot-core can also update the gradle wrapper, there should also be at least one more detected change (gradle wrapper updates could include .jar/props/scripts, 1 file minimum).
+*Currently*, the dependabot-core dry run will  only pick up on 1 and 2.
+
+If a PR to dependabot-core can also update the gradle wrapper, there should also be at least one more detected change (3 - gradle wrapper updates could include .jar/props/scripts, 1 file minimum).
