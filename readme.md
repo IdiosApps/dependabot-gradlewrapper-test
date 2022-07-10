@@ -15,6 +15,8 @@ There a few main problems regarding *security*:
 Whilst you can manually update the gradle wrapper .jar/properties/scripts with `./gradlew wrapper --gradle-version ${VERSION} --distribution-type all`, it's not automatic.
 It would be nice to remove as much toil as possible around dependency/tooling upgrades.
 
+Whilst there are Github Actions like [update-gradle-wrapper-action](https://github.com/marketplace/actions/update-gradle-wrapper-action), many users already on dependabot may not hear about this action or go to find it. If Dependabot could update the gradle wrapper, it would make things [safer and faster](https://docs.gradle.org/7.0.2/release-notes.html#performance-improvements) for a huge number of users.
+
 ### So, what does this repo do?
 
 The `build.gradle` has two outdated dependencies:
