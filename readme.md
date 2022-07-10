@@ -17,7 +17,7 @@ It would be nice to remove as much toil as possible around dependency/tooling up
 
 Whilst there are Github Actions like [update-gradle-wrapper-action](https://github.com/marketplace/actions/update-gradle-wrapper-action), many users already on dependabot may not hear about this action or go to find it. If Dependabot could update the gradle wrapper, it would make things [safer and faster](https://docs.gradle.org/7.0.2/release-notes.html#performance-improvements) for a huge number of users.
 
-### So, what does this repo do?
+### This repo can be used to test dependabot-core
 
 The `build.gradle` has two outdated dependencies:
 
@@ -28,8 +28,10 @@ In addition, the gradle wrapper is outdated:
 
 3. `./gradlew wrapper --gradle-version 7.4.1 --distribution-type all` was used (at least 7.4.2 is available)
 
+### Testing dependabot-core with this repo
+
 This repo can be used with Dependabot's [_dry run_ mode](https://github.com/dependabot/dependabot-core#dry-run-script).
-*Currently*, the dependabot-core dry only picks up on 1 and 2:
+*Currently*, the dependabot-core dry only picks up on dependencies 1 and 2:
 
 ```shell
 bin/dry-run.rb gradle IdiosApps/dependabot-gradlewrapper-test
