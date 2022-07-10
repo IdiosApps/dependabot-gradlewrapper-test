@@ -37,4 +37,6 @@ bin/dry-run.rb gradle IdiosApps/dependabot-gradlewrapper-test
 => updating 2 dependencies: org.junit.jupiter:junit-jupiter-api, org.springframework.boot
 ```
 
+You can see actual [PRs for these on this repo](https://github.com/IdiosApps/dependabot-gradlewrapper-test/pulls). They were made by the [dependabot action](https://github.com/IdiosApps/dependabot-gradlewrapper-test/blob/main/.github/dependabot.yml).
+
 If a PR to dependabot-core can also update the gradle wrapper, there should also be at least one more detected change (1, 2, and also 3). Gradle wrapper updates could include .jar/props/scripts, so at least one 1 file.
