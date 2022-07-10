@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot
+    // At least 2.7.1 is available
+    id 'org.springframework.boot' version '2.6.0'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    // // at least 5.8.2 is available
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.0.0'
+}
+
+//test {
+//    useJUnitPlatform()
+//}
