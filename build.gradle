@@ -15,7 +15,7 @@ repositories {
 dependencies {
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
     // // at least 5.8.2 is available
-    implementation 'org.junit.jupiter:junit-jupiter-api:5.0.0'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
 }
 
 //test {
