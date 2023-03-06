@@ -2,7 +2,7 @@ plugins {
     id 'java'
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot
     // At least 2.7.1 is available
-    id 'org.springframework.boot' version '2.6.0'
+    id 'org.springframework.boot' version '3.0.4'
 }
 
 group 'org.example'
